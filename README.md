@@ -48,7 +48,11 @@ mentor-system/
 │   ├── app-context.template.md        ← blank template for a new app
 │   └── apps/
 │       └── <app-name>/                ← per-app knowledge (one folder per app)
-│           └── context.md             ← that app's state, rules, identifiers
+│           ├── context.md             ← hub: state, ownership, features, key actions
+│           ├── database.md            ← entities, FKs, static entity values
+│           ├── blocks.md              ← screens & blocks inventory
+│           ├── bugs-backlog.md        ← known bugs not yet worked on
+│           └── handoff.md             ← where the last session stopped
 └── .claude/
     └── skills/
         ├── mentor/SKILL.md            ← /mentor  — start a task the right way
