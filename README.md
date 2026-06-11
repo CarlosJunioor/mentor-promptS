@@ -76,6 +76,26 @@ mentor-system/
   `/limit-testing` works here. When something is proven (≥ 2 scenarios) it is **promoted**
   into `mentor-behavior.md` and removed from here.
 
+## Getting started
+
+**To use it — clone, don't fork:**
+
+```bash
+git clone https://github.com/CarlosJunioor/mentor-system
+cd mentor-system
+claude        # open Claude Code in this folder
+/mentor       # go
+```
+
+Your per-app context (`knowledge/apps/<your-app>/`) is git-ignored, so your company's
+entities, screens, and owners stay on your machine and never get published. To receive
+improvements to the generic knowledge later, just `git pull` — your local app folders
+never conflict.
+
+**To contribute back — fork.** If you discover something new about Mentor (a limitation,
+a capability, a prompt pattern), that generic knowledge is exactly what this repo
+collects. See [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## How to use it
 
 1. Open Claude Code **in this folder** (`mentor-system/`). The skills load automatically.
@@ -123,6 +143,8 @@ share. The skill format and `write-a-skill` skill are adapted from
 
 ## Contributing
 
-Issues and pull requests are welcome. Keep contributions **app-agnostic** — never commit a
-specific app's entities, screens, owners, UUIDs, or environment URLs. Per-app specifics
-belong only in your local, git-ignored `knowledge/apps/<app-name>/` folder.
+Issues and pull requests are welcome — especially **validated Mentor learnings** (new
+limitations, capabilities, or prompt patterns). The one hard rule: contributions must be
+**app-agnostic** — never commit a specific app's entities, screens, owners, UUIDs, or
+environment URLs. See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide, including
+how findings get validated and promoted.

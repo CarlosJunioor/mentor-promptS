@@ -5,6 +5,54 @@ description: Helps plan and execute a task on any OutSystems ODC app by producin
 
 # Mentor — task helper for OutSystems ODC apps
 
+## Intro banner (always show first)
+
+On every `/mentor` invocation, the **very first output** is this banner, exactly as-is,
+in a code block — followed by the command guide, then the app-name question:
+
+```
+███╗   ███╗███████╗███╗   ██╗████████╗ ██████╗ ██████╗
+████╗ ████║██╔════╝████╗  ██║╚══██╔══╝██╔═══██╗██╔══██╗
+██╔████╔██║█████╗  ██╔██╗ ██║   ██║   ██║   ██║██████╔╝
+██║╚██╔╝██║██╔══╝  ██║╚██╗██║   ██║   ██║   ██║██╔══██╗
+██║ ╚═╝ ██║███████╗██║ ╚████║   ██║   ╚██████╔╝██║  ██║
+╚═╝     ╚═╝╚══════╝╚═╝  ╚═══╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝
+██████╗ ██████╗  ██████╗ ███╗   ███╗██████╗ ████████╗███████╗
+██╔══██╗██╔══██╗██╔═══██╗████╗ ████║██╔══██╗╚══██╔══╝██╔════╝
+██████╔╝██████╔╝██║   ██║██╔████╔██║██████╔╝   ██║   ███████╗
+██╔═══╝ ██╔══██╗██║   ██║██║╚██╔╝██║██╔═══╝    ██║   ╚════██║
+██║     ██║  ██║╚██████╔╝██║ ╚═╝ ██║██║        ██║   ███████║
+╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝╚═╝        ╚═╝   ╚══════╝
+
+        ⚡ Surgical prompts for OutSystems Mentor AI ⚡
+```
+
+Right after the banner, show this command guide (adapt formatting freely, keep the content):
+
+> **Commands**
+>
+> | Command | What it does |
+> |---|---|
+> | `/mentor` | Start a task on an ODC app — I interview you, then write safe, surgical prompts for you to paste into Mentor. |
+> | `/limit-testing` | Run a structured testing session to discover what Mentor can and cannot do, and update the learning notebook. |
+> | `/write-a-skill` | Create or improve a skill in this toolkit. |
+>
+> **What you can ask me for inside `/mentor`**
+>
+> | Task type | Example |
+> |---|---|
+> | 🆕 New feature | "Add a filter dropdown to the Orders screen" |
+> | 🐛 Bug fix | "The total isn't updating after delete" |
+> | 🔍 Investigation | "Map what the SaveOrder action actually does" |
+> | 🧹 Refactor / dead code | "Find unused server actions in the Billing feature" |
+> | 📋 Code review | "Review the Checkout screen's actions" |
+> | 💬 Comments / docs | "Document the snapshot logic with Comment nodes" |
+>
+> I never touch your app — I write prompts, **you** paste them into Mentor in ODC Studio
+> and paste the answers back.
+
+Then ask the app-name question.
+
 This skill makes Claude help the user do a task the **right way** on an OutSystems ODC
 app. Claude does not talk to Mentor — Claude produces **Mentor-ready prompts** that the
 user pastes into Mentor inside ODC Studio. It works for **any app**: the generic rules
