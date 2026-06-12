@@ -25,6 +25,7 @@ Right after the banner, show this command guide (adapt formatting freely, keep t
 > |---|---|
 > | `/mentor` | Start a task on an ODC app — I interview you, then write safe, surgical prompts for you to paste into Mentor. |
 > | `/limit-testing` | Run a structured testing session to discover what Mentor can and cannot do, and update the learning notebook. |
+> | `/talk-with-mentor` | Interview Mentor about itself — features, modes, limits — and turn its answers into testable hypotheses. |
 > | `/write-a-skill` | Create or improve a skill in this toolkit. |
 >
 > **What you can ask me for inside `/mentor`**

@@ -45,6 +45,7 @@ mentor-system/
 │   ├── mentor-behavior.md             ← GENERIC source of truth: how Mentor behaves + prompt templates
 │   ├── outsystems-patterns.md         ← GENERIC reusable ODC architecture patterns
 │   ├── learnings-points.md            ← GENERIC lab notebook: untested hypotheses about Mentor
+│   ├── mentor-interviews.md           ← GENERIC interview log: what Mentor says about itself (raw Q&A)
 │   ├── app-context.template.md        ← blank template for a new app
 │   └── apps/
 │       └── <app-name>/                ← per-app knowledge (one folder per app)
@@ -57,6 +58,9 @@ mentor-system/
     └── skills/
         ├── mentor/SKILL.md            ← /mentor  — start a task the right way
         ├── limit-testing/SKILL.md     ← /limit-testing — test Mentor's limits, grow the notebook
+        ├── talk-with-mentor/          ← /talk-with-mentor — interview Mentor about itself
+        │   ├── SKILL.md
+        │   └── QUESTIONS.md           ← question bank by topic, with coverage state
         └── write-a-skill/SKILL.md     ← /write-a-skill  — build new skills (from Matt Pocock)
 ```
 
@@ -79,6 +83,9 @@ mentor-system/
 - **`learnings-points.md`** — volatile, generic. Hypotheses and observations about Mentor.
   `/limit-testing` works here. When something is proven (≥ 2 scenarios) it is **promoted**
   into `mentor-behavior.md` and removed from here.
+- **`mentor-interviews.md`** — raw, generic. Verbatim Q&A from `/talk-with-mentor`
+  sessions. Mentor's self-reports are **claims, not facts** — distilled claims enter
+  `learnings-points.md` as hypotheses and only graduate via `/limit-testing`.
 
 ## Getting started
 
@@ -110,7 +117,11 @@ collects. See [CONTRIBUTING.md](CONTRIBUTING.md).
    `knowledge/app-context.template.md`.
 3. **Want to test what Mentor can do?** Type `/limit-testing`. Claude picks an untested
    capability, helps you design the test, records the result, and promotes what works.
-4. **Want to add a new skill** as the system grows? Type `/write-a-skill`.
+4. **Want to ask Mentor about itself?** Type `/talk-with-mentor`. Claude composes interview
+   questions (features, modes, limits), logs Mentor's answers verbatim, and turns every
+   claim into a testable hypothesis — nothing Mentor says about itself is trusted until
+   `/limit-testing` proves it. The loop: **talk → test → trust**.
+5. **Want to add a new skill** as the system grows? Type `/write-a-skill`.
 
 ## Adding a new app
 
