@@ -8,7 +8,7 @@ Pick 3–5 questions per prompt. Always append the anti-guess clause:
 
 ---
 
-## T1. Identity, modes & entry points — ⬜
+## T1. Identity, modes & entry points — ✅ (covered 2026-06-12, 2 rounds; spawned A.8/A.9/A.10)
 
 - What is your official name and what product family are you part of?
 - What modes or interaction types do you support (e.g., asking questions vs. making

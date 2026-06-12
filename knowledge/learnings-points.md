@@ -72,6 +72,38 @@ missing where filters, large fetched volumes."
 sometimes `OnTextChanged`. Document 3–4 real attempts to find the pattern. **Priority**:
 HIGH — pinning the condition removes a big limitation.
 
+### A.8 ⚪ Plan-then-confirm mode for multi-step changes (self-reported)
+**Source**: Mentor interview 2026-06-12 (T1) — *introspection claim, untrusted*.
+**Hypothesis**: for "larger or multi-step changes" Mentor presents a plan first and waits
+for confirmation before touching anything. If true, this could give a controlled way to
+do coordinated changes — but golden rule §1.2 (one change per prompt) stands until proven:
+we ban bundling precisely because Mentor fails on multi-step execution.
+**How to test**: ask for a small 3-step change ("create var + call action + bind widget")
+phrased as one request; observe whether Mentor (a) presents a plan and waits, (b) executes
+all steps correctly after confirmation, or (c) barrels ahead and breaks things.
+**Priority**: HIGH — would refine or reinforce §1.2 either way.
+
+### A.9 ⚪ Troubleshooting mode — fixing validation errors/warnings on request (self-reported)
+**Source**: Mentor interview 2026-06-12 (T1) — *introspection claim, untrusted*.
+**Hypothesis**: Mentor can inspect the app's validation errors/warnings and help fix them
+when explicitly asked.
+**How to test**: with a known TrueChange-style error present (e.g. a broken connector or
+missing mandatory property), ask "list the current validation errors you can see" (read-only
+first), then in a second prompt ask it to fix exactly one. **Caution**: §1.3 / §2 — its
+"auto-correct" instinct is destructive; Ctrl+S before, Ctrl+Z ready.
+
+### A.10 ⚪ Force-planning lever + partial plan approval (self-reported)
+**Source**: Mentor interview 2026-06-12 (T1 round 2) — *introspection claim, untrusted*.
+**Hypothesis**: (a) "Present a plan and wait. Do not apply anything yet." forces Mentor to
+stop at the plan even for small changes; (b) a confirmed plan can be approved partially
+("do steps 1 and 2 only", "skip the deletion part") and Mentor executes only the subset.
+If validated, (a) becomes a standard safety preamble for risky implementation prompts.
+**How to test**: same session as A.8 — first force a plan for a trivial change and confirm
+nothing was applied (verify visually, §1.4); then approve a strict subset and verify only
+that subset changed. **Caveat from the same interview**: Mentor admits no rollback and an
+auto-fix-on-failure instinct, so run this on a throwaway element with Ctrl+S beforehand.
+**Priority**: HIGH — pairs with A.8.
+
 ---
 
 ## B. Loose observations (not validated, no test planned yet)
@@ -83,10 +115,21 @@ HIGH — pinning the condition removes a big limitation.
   *implementation* tasks as for investigation?
 - 🟣 **"Stopped here as requested"** — Mentor follows "Then stop" well. Open: is there a
   stricter "stop on first error, do not auto-correct" phrasing that prevents the
-  connector-mangling auto-correction (mentor-behavior §1.3/§2)?
+  connector-mangling auto-correction (mentor-behavior §1.3/§2)? *Interview 2026-06-12
+  (T1 round 2): Mentor itself states its default after a failure is "try to address it
+  rather than silently abandon the work" — i.e., auto-correct is its self-described
+  default, so an explicit stop-on-error instruction is necessary, not optional.*
 - 🟣 **Mentor categorizes patterns when asked** (IDENTICAL / SIMILAR / CONCEPTUAL). Could
   be reused for structured analysis ("classify each IfNode as: guard / state branch /
   error handling / unreachable / legacy").
+- 🟣 **Mentor cannot see its own entry points.** (interview 2026-06-12, T1) It declined to
+  list the panels/menus/shortcuts it's exposed through, and won't claim whether the entry
+  point changes its capabilities. Self-knowledge about product surface is a blind spot —
+  product-surface questions should go to OutSystems docs, not to Mentor itself.
+- 🟣 **Anti-guess clause works well in self-description prompts.** (interview 2026-06-12,
+  T1) "If you cannot verify something about yourself, say so — do not guess" produced a
+  clean certain-vs-not-verified split through the entire answer. Related to the existing
+  observation on anti-hallucination block effectiveness below.
 - 🟣 **Final output reliable, evidence trail not.** In structured analysis (caller
   analysis, code review) the final list/conclusion can be correct while the detailed
   evidence trail mixes real findings with invented ones in the same confident tone. Never
@@ -117,7 +160,15 @@ skill (template + workflow). Use `/write-a-skill` to build it.
 
 Short summaries; detail lives in the relevant app context and the chats.
 
-- _(none yet in this generic notebook)_
+- **2026-06-12 — `/talk-with-mentor` session 1 (T1: identity, modes & entry points), 2
+  rounds.** First interview session ever. Mentor showed strong epistemic discipline under
+  the anti-guess clause (clean certain/not-verified splits). Key self-reports, all
+  untrusted until tested: a plan-then-confirm mode for multi-step changes (→ A.8), a
+  troubleshooting mode for validation errors (→ A.9), a force-planning lever + partial
+  plan approval (→ A.10). Two damning admissions that *corroborate* existing rules: no
+  rollback / no all-or-nothing execution (supports §1.2, §1.6), and an auto-fix-on-failure
+  default (supports §1.3 and the section-B stop-on-error question). Also: Mentor cannot
+  see its own product entry points. Raw Q&A in `mentor-interviews.md`.
 
 ---
 
