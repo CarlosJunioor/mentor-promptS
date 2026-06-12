@@ -19,15 +19,13 @@ If you find any of the following, **report it privately**, never in a public iss
 
 ### How to report
 
-1. **Preferred — GitHub private vulnerability reporting.** Go to the repo's **Security**
-   tab → **Report a vulnerability**. (Maintainer: enable this once under
-   *Settings → Security → Private vulnerability reporting*.) It opens a private channel
-   only you and the maintainer can see.
-2. If that is unavailable, contact the maintainer privately through their GitHub profile
-   rather than filing a public issue.
+Contact the maintainer **privately** — through their GitHub profile, or by opening a
+minimal issue that says only *"I found a security/privacy issue, how can I reach you
+privately?"* **without quoting the data** — and they'll follow up off the public timeline.
 
-Please include where you saw it (file + commit if known) and, for a data leak, **do not
-quote the private data** — just point to its location so it can be removed.
+When you report, include where you saw it (file + commit if known). For a data leak,
+**do not quote the private data** anywhere public — just point to its location so it can
+be removed.
 
 ## What happens next
 
