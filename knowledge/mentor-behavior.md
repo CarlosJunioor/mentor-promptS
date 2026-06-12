@@ -373,6 +373,6 @@ produces doubles as the basis for documentation Comment nodes (§1.8).
 - New limitation → add to §2 here (once validated in ≥ 2 scenarios).
 - New capability → add to §3 here (once validated in ≥ 2 scenarios).
 - New validated prompt pattern → add to §4 here.
-- Unproven hypotheses and one-off observations → `knowledge/learnings-points.md`
+- Unproven hypotheses and one-off observations → `knowledge/learning-points.md`
   (the lab notebook), not here. `/limit-testing` validates them and promotes the
   proven ones up into this file.

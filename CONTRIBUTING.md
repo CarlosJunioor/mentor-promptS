@@ -1,4 +1,4 @@
-# Contributing to Mentor System
+# Contributing to Mentor Prompts
 
 Thanks for wanting to make this better. This repo is a **shared brain about how the
 OutSystems Mentor AI behaves** — every contribution makes prompts safer and sharper for
@@ -22,7 +22,7 @@ PRs containing app-specific data will be asked to anonymize before merge.
 
 | Contribution | Where it goes | Bar to merge |
 |---|---|---|
-| 🟣 New observation / hypothesis about Mentor | `knowledge/learnings-points.md` (section B) | Saw it once, described precisely (what you asked, what Mentor did, ODC version/date if known) |
+| 🟣 New observation / hypothesis about Mentor | `knowledge/learning-points.md` (section B) | Saw it once, described precisely (what you asked, what Mentor did, ODC version/date if known) |
 | 🔴 New **limitation** (something Mentor fails at) | `knowledge/mentor-behavior.md` §2 | Validated in **≥ 2 distinct scenarios** (different apps or different actions) |
 | 🟢 New **capability** (something Mentor does reliably) | `knowledge/mentor-behavior.md` §3 | Validated in **≥ 2 distinct scenarios** |
 | 📋 New / improved **prompt template** | `knowledge/mentor-behavior.md` §4 | Used successfully at least twice; includes the anti-hallucination block where relevant |
@@ -31,13 +31,13 @@ PRs containing app-specific data will be asked to anonymize before merge.
 | 📝 Docs, typos, clarity | anywhere | Just open the PR |
 
 **Not sure if your finding meets the ≥2-scenario bar?** Contribute it as a 🟣 observation
-to `learnings-points.md` anyway — that file is the lab notebook, and `/limit-testing`
+to `learning-points.md` anyway — that file is the lab notebook, and `/limit-testing`
 sessions exist precisely to validate entries and promote them up.
 
 ## How findings get validated (the promotion pipeline)
 
 ```
-you notice something  →  learnings-points.md (hypothesis, 1 sighting)
+you notice something  →  learning-points.md (hypothesis, 1 sighting)
                               │
                               ▼  /limit-testing session, or a 2nd confirmed sighting
                          mentor-behavior.md §2 or §3 (validated rule)
@@ -46,7 +46,7 @@ you notice something  →  learnings-points.md (hypothesis, 1 sighting)
                          mentor-behavior.md §4 (template updated)
 ```
 
-When you promote an entry in a PR, **remove it from `learnings-points.md`** in the same
+When you promote an entry in a PR, **remove it from `learning-points.md`** in the same
 PR — a fact lives in exactly one place.
 
 ## How to submit

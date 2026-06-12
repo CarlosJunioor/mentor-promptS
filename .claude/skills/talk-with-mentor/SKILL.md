@@ -16,7 +16,7 @@ hypotheses that sharpen every future prompt.
 it may cite features it doesn't have or deny limits it does have. Therefore:
 
 - **Nothing from an interview goes into `mentor-behavior.md` directly. Ever.**
-- Every claim is routed as a **hypothesis** into `knowledge/learnings-points.md`
+- Every claim is routed as a **hypothesis** into `knowledge/learning-points.md`
   (⚪ if testable, 🟣 if loose) and proven later via `/limit-testing`.
 - The three skills form a loop: **`/talk-with-mentor` (ask) → `/limit-testing` (prove)
   → `/mentor` (use)**.
@@ -29,7 +29,7 @@ accordingly — see step 5.
 
 - `knowledge/mentor-interviews.md` — the **interview log**: verbatim Q&A per dated
   session. This skill's primary output. Raw answers are never lost.
-- `knowledge/learnings-points.md` — where distilled claims land as hypotheses (A or B).
+- `knowledge/learning-points.md` — where distilled claims land as hypotheses (A or B).
 - `knowledge/mentor-behavior.md` — read-only here: used to spot contradictions between
   what Mentor claims and what testing already proved.
 - [QUESTIONS.md](QUESTIONS.md) — the question bank, organized by topic, with coverage
@@ -53,7 +53,7 @@ accordingly — see step 5.
    - **Matches** something already in `mentor-behavior.md` → note the corroboration in
      the log; nothing else to do.
    - **Contradicts** `mentor-behavior.md` → flag it loudly to the user; add a ⚪ entry
-     in learnings-points section A to re-test (observed behavior outranks self-report
+     in learning-points section A to re-test (observed behavior outranks self-report
      until re-proven).
    - **New & testable** ("I can rename and update references") → ⚪ hypothesis in
      section A with a suggested test.
@@ -64,7 +64,7 @@ accordingly — see step 5.
    session). Ask Mentor for concrete examples: "show the exact prompt format you handle
    best", "list the node types you can create".
 7. **Close the session**: update the topic's coverage state in QUESTIONS.md, add a
-   one-paragraph summary to learnings-points section D, and tell the user which new
+   one-paragraph summary to learning-points section D, and tell the user which new
    ⚪ hypotheses are now queued for `/limit-testing`.
 
 ## Rules

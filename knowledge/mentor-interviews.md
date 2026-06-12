@@ -1,7 +1,7 @@
 # Mentor — interview log (raw Q&A)
 
 Verbatim record of `/talk-with-mentor` sessions. Questions Claude composed, answers
-Mentor gave — **unedited**. Distilled claims go to `learnings-points.md` as hypotheses;
+Mentor gave — **unedited**. Distilled claims go to `learning-points.md` as hypotheses;
 nothing here is validated truth (Mentor's self-reports are claims, not facts).
 
 Format per session:
@@ -15,7 +15,7 @@ Format per session:
 **A1 (verbatim):**
 <Mentor's answer, pasted as-is>
 
-**Claims extracted:** [product-fact] / [introspection] → routed to learnings-points §A/§B
+**Claims extracted:** [product-fact] / [introspection] → routed to learning-points §A/§B
 ```
 
 ---
@@ -107,11 +107,11 @@ Format per session:
 
 **Claims extracted:**
 1. [product-fact] Name "Mentor", OutSystems AI agent — **matches** known context. Corroborated.
-2. [introspection] **Plan-then-confirm mode**: "for larger or multi-step changes, I present a plan and wait for your confirmation first" — NEW & testable → learnings-points A.8. Tension (not direct contradiction) with golden rule §1.2 (one change per prompt): we ban bundling because Mentor *fails* on multi-step; Mentor claims it *plans* multi-step. Test which is true.
-3. [introspection] **Troubleshooting mode**: can inspect and help fix validation errors/warnings on request — NEW & testable → learnings-points A.9.
+2. [introspection] **Plan-then-confirm mode**: "for larger or multi-step changes, I present a plan and wait for your confirmation first" — NEW & testable → learning-points A.8. Tension (not direct contradiction) with golden rule §1.2 (one change per prompt): we ban bundling because Mentor *fails* on multi-step; Mentor claims it *plans* multi-step. Test which is true.
+3. [introspection] **Troubleshooting mode**: can inspect and help fix validation errors/warnings on request — NEW & testable → learning-points A.9.
 4. [introspection] "Investigation mode avoids changing the app" — consistent with observed behavior of "Investigation only" prompts (template 4.1). Corroborated, no action.
 5. [introspection] "Implementing changes ... renaming ... elements" — rename listed as a supported change type; feeds existing backlog item A.3 (rename without breaking references), no new entry.
-6. [product-fact] Entry points: Mentor says it *cannot see its own entry points* and won't claim capability differences per entry point — honest unknown → 🟣 in learnings-points B.
+6. [product-fact] Entry points: Mentor says it *cannot see its own entry points* and won't claim capability differences per entry point — honest unknown → 🟣 in learning-points B.
 7. Meta-observation: the anti-guess clause produced consistent "certain vs not verified" separation across the whole answer — corroborates the 🟣 on anti-hallucination block effectiveness; works well for self-description prompts.
 
 ## 2026-06-12 — Identity, modes & entry points (T1) — round 2 (plan-then-confirm drill-down)
@@ -178,7 +178,7 @@ Format per session:
 **Claims extracted:**
 1. [introspection] **No all-or-nothing execution, no rollback** — "step 1 may still be present if step 2 failed", "cannot guarantee rollback semantics". **Corroborates** §1.2 (why we ban bundling), §1.6 (Ctrl+Z is the parachute), and the template directive "STOP if any step fails — do not partially apply" being load-bearing.
 2. [introspection] **Auto-fix-on-failure instinct admitted**: "If the issue seems fixable, I should try to address it rather than silently abandon the work." **Corroborates §1.3/§2** — this is the auto-correct behavior that mangles connectors. Mentor frames it as a virtue; our testing shows it's the failure mode. Also speaks to the section-B open question on a "stop on first error" phrasing — Mentor's default is the opposite, so an explicit stop instruction is necessary, not optional.
-3. [introspection] **Force-planning lever**: "Present a plan and wait / Do not apply anything yet" claimed to hold even for small changes — NEW & testable → learnings-points A.10. Would be a major safety tool if validated.
+3. [introspection] **Force-planning lever**: "Present a plan and wait / Do not apply anything yet" claimed to hold even for small changes — NEW & testable → learning-points A.10. Would be a major safety tool if validated.
 4. [introspection] **Partial plan approval** ("do steps 1 and 2 only", "skip the deletion part") — NEW & testable, folded into A.10 (same test session).
 5. [introspection] Simple-vs-multi-step threshold is fuzzy (scope/dependency/ambiguity/reversibility), no numeric rule — loose; recorded here, no separate entry. Implication for /mentor: never rely on Mentor self-classifying a request as "simple"; keep prompts surgical regardless.
 6. [introspection] Sequential execution of confirmed plans, "logical stages" — detail for A.8's test design.

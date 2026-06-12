@@ -93,7 +93,7 @@ and signatures, structural asymmetries between similar screens.
 
 When you discover something new about Mentor, route it: app-specific facts stay here;
 generic Mentor behavior goes to [mentor-behavior.md](../../mentor-behavior.md);
-unproven hypotheses go to [learnings-points.md](../../learnings-points.md).
+unproven hypotheses go to [learning-points.md](../../learning-points.md).
 
 ---
 

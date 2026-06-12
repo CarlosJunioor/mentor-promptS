@@ -72,7 +72,7 @@ expressions. Never mention the `.md` files in a prompt for Mentor.
   Read this fully at the start of every task.
 - `knowledge/outsystems-patterns.md` — reusable ODC architecture patterns. Skim for
   anything relevant to the change.
-- `knowledge/learnings-points.md` — unproven hypotheses about Mentor. Skim; do not treat
+- `knowledge/learning-points.md` — unproven hypotheses about Mentor. Skim; do not treat
   as reliable.
 
 **App-specific (pick the app for this task):**
@@ -157,7 +157,7 @@ If the name is ambiguous or you're unsure, list whatever folders exist under
   `bugs-backlog.md`.
 - Update `handoff.md` with where things stand and the next step.
 - If Mentor did something new or surprising, add a 🟣 observation to
-  `knowledge/learnings-points.md` section B. Do not stop the task to test it.
+  `knowledge/learning-points.md` section B. Do not stop the task to test it.
 - If observations piled up, suggest running `/limit-testing` later to validate them.
 
 ## Rules

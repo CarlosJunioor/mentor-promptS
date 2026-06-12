@@ -12,7 +12,7 @@ where churn lives until something is proven and **promoted** there.
 
 ## 0. How to use this file
 
-| | `mentor-behavior.md` | `learnings-points.md` |
+| | `mentor-behavior.md` | `learning-points.md` |
 |---|---|---|
 | What | Validated rules + capabilities + templates | Hypotheses + test backlog |
 | Stability | Stable, "source of truth" | Volatile, scratchpad |

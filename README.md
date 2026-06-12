@@ -1,4 +1,4 @@
-# Mentor System
+# Mentor Prompts
 
 <p align="center">
   <img width="500" height="500" alt="mentor-prompts" src="https://github.com/user-attachments/assets/0f95ebef-7588-4bf9-b747-7f7666eacb2b" />
@@ -47,12 +47,12 @@ The knowledge is split so the same system works across every app you touch:
 ## Folder layout
 
 ```
-mentor-system/
+mentor-prompts/
 ├── README.md                          ← you are here
 ├── knowledge/
 │   ├── mentor-behavior.md             ← GENERIC source of truth: how Mentor behaves + prompt templates
 │   ├── outsystems-patterns.md         ← GENERIC reusable ODC architecture patterns
-│   ├── learnings-points.md            ← GENERIC lab notebook: untested hypotheses about Mentor
+│   ├── learning-points.md             ← GENERIC lab notebook: untested hypotheses about Mentor
 │   ├── mentor-interviews.md           ← GENERIC interview log: what Mentor says about itself (raw Q&A)
 │   ├── app-context.template.md        ← blank template for a new app
 │   └── apps/
@@ -81,27 +81,27 @@ mentor-system/
            │                      │ promotion rule (≥2 scenarios)      │
            ├──reads──► apps/<app>/context.md  (the app for this task)  │
            │                                                           │
-           └──writes observations──► learnings-points.md ◄──reads/updates┘
+           └──writes observations──► learning-points.md ◄──reads/updates┘
 ```
 
 - **`mentor-behavior.md`** — stable, generic. Validated rules, limitations, capabilities,
   and the prompt templates (§4). `/mentor` reads it every task, for every app.
 - **`apps/<app>/context.md`** — stable, app-specific. The project map, ownership, and
   accumulated decisions for one app. `/mentor` reads the one matching the current task.
-- **`learnings-points.md`** — volatile, generic. Hypotheses and observations about Mentor.
+- **`learning-points.md`** — volatile, generic. Hypotheses and observations about Mentor.
   `/limit-testing` works here. When something is proven (≥ 2 scenarios) it is **promoted**
   into `mentor-behavior.md` and removed from here.
 - **`mentor-interviews.md`** — raw, generic. Verbatim Q&A from `/talk-with-mentor`
   sessions. Mentor's self-reports are **claims, not facts** — distilled claims enter
-  `learnings-points.md` as hypotheses and only graduate via `/limit-testing`.
+  `learning-points.md` as hypotheses and only graduate via `/limit-testing`.
 
 ## Getting started
 
 **To use it — clone, don't fork:**
 
 ```bash
-git clone https://github.com/CarlosJunioor/mentor-system
-cd mentor-system
+git clone https://github.com/CarlosJunioor/mentor-prompts
+cd mentor-prompts
 claude        # open Claude Code in this folder
 /mentor       # go
 ```
@@ -117,7 +117,7 @@ collects. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## How to use it
 
-1. Open Claude Code **in this folder** (`mentor-system/`). The skills load automatically.
+1. Open Claude Code **in this folder** (`mentor-prompts/`). The skills load automatically.
 2. **Starting a task on an OutSystems app?** Type `/mentor`. Claude reads the generic
    rules + the app's context, grills you until the change is clear, and produces
    Mentor-ready prompts the right way (investigation first, one change per prompt, safety
@@ -140,7 +140,7 @@ collects. See [CONTRIBUTING.md](CONTRIBUTING.md).
 ## The loop (this is the whole point)
 
 ```
-use /mentor on a task → notice something new about Mentor → jot it in learnings-points.md
+use /mentor on a task → notice something new about Mentor → jot it in learning-points.md
         ▲                                                              │
         │                                                              ▼
 keep mentor-behavior.md sharp ◄── /limit-testing validates & promotes ◄── run /limit-testing later
